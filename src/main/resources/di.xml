@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="foo" class="com.drafthj.study.dependencyInjection.Foo">
+        <property name="bar" ref="bar"/>
+        <property name="baz" ref="baz"/>
+    </bean>
+    <bean id="bar" class="com.drafthj.study.dependencyInjection.Bar"/>
+    <bean id="baz" class="com.drafthj.study.dependencyInjection.Baz"/>
+
+    <bean id="exampleBean" class="com.drafthj.study.dependencyInjection.ExampleBean">
+        <constructor-arg name="years" value="1"/>
+        <constructor-arg name="ultimateAnswer" value="ss"/>
+    </bean>
+</beans>
